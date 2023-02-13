@@ -12,7 +12,7 @@ class ListingController extends Controller
     // all listing 
     public function index() {
         return view('listings.index', [
-            'listings' => Listing::latest()->get()
+            'listings' => Listing::latest()->filter(request(['tag', 'search']))->get()
         ]);
     }
 
@@ -21,5 +21,10 @@ class ListingController extends Controller
         return view('listings.show', [
             'listing' => $listing
         ]);
+    }
+
+    // show create form 
+    public function create () {
+        return view('listings.create');
     }
 }
