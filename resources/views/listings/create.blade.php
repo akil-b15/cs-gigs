@@ -8,7 +8,8 @@
             <p class="mb-4">Post a gig to find a developer</p>
         </header>
 
-        <form action="">
+        <form method="POST" action="/listings">
+            @csrf
             <div class="mb-6">
                 <label
                     for="company"

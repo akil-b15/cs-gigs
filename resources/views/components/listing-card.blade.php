@@ -9,7 +9,8 @@
         />
         <div>
             <h3 class="text-2xl">
-                <a href="/listings/{{$listing->id}}">{{$listing->title}}</a>
+                <a href="{{route('single.listing', $listing->id)}}">{{$listing->title}}</a>
+                {{-- {{route('single_listing', $listing->id)}} ----/////----/listings/{{$listing->id}}--}}
             </h3>
             <div class="text-xl font-bold mb-4">{{$listing->company}}</div>
 

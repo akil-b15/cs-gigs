@@ -28,10 +28,14 @@ use Illuminate\Support\Facades\Route;
 
 
 // All Listing
-Route::get('/', [ListingController::class, 'index']);
+Route::get('/', [ListingController::class, 'index'])->name('home');
 
 // Show Create Form
-Route::get('listings/create', [ListingController::class, 'create']);
+Route::get('listings/create', [ListingController::class, 'create'])->name('create');
+
+// Store New Listing
+Route::post('listings', [ListingController::class, 'store']);
+
 
 // Single Listing
-Route::get('listings/{listing}', [ListingController::class, 'show']);
+Route::get('listings/{listing}', [ListingController::class, 'show'])->name('single.listing');
