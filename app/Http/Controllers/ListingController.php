@@ -29,13 +29,6 @@ class ListingController extends Controller
         return view('listings.create');
     }
 
-    //show edit form
-    public function edit (Listing $listing) {
-        // dd($listing->title);
-        return view('listings.edit', [
-            'listing' => $listing
-        ]);
-    }
 
     // store listing data
     public function store (Request $request) {
@@ -58,7 +51,18 @@ class ListingController extends Controller
         return redirect('/')->with('message', 'Listing created successfully!');
     }
 
-    // update listing data
+
+
+    // ----------------------------------------------show edit form----------------------------------------------------------
+    public function edit (Listing $listing) {
+        // dd($listing->title);
+        return view('listings.edit', [
+            'listing' => $listing
+        ]);
+    }
+
+
+    // --------------------------------------------update listing data-------------------------------------------------------
     public function update (Request $request, Listing $listing) {
         $formFields = $request->validate([
             'title' => 'required',
@@ -79,7 +83,10 @@ class ListingController extends Controller
         return back()->with('message', 'Listing updated successfully!');
     }
 
-    // DELETE LISTING 
+
+
+
+    // -------------------------------------------------DELETE LISTING------------------------------------------------------------ 
     public function destroy(Listing $listing){
         $listing->delete();
         return redirect('/')->with('message', 'Listing deleted successfully!!!');
