@@ -3,7 +3,7 @@
     <x-card class="p-10 rounded max-w-lg mx-auto mt-24" >
         <header class="text-center">
             <h2 class="text-2xl font-bold uppercase mb-1">
-                Edit Gig
+                Edit Your Gig
             </h2>
             <p class="mb-4">Edit: {{$listing->title}}</p>
         </header>
