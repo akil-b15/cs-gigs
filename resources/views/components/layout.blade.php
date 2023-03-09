@@ -28,8 +28,8 @@
         <title>LaraGigs | Find Laravel Jobs & Projects</title>
     </head>
     <body>
-        <nav class="flex justify-between items-center mb-4">
-            <a href="{{route('home')}}"><img class="w-24" src="{{asset('images/logo.png')}}" alt="" class="logo"
+        <nav class="flex justify-between items-center mb-1">
+            <a href="{{route('home')}}"><img class="w-12" src="{{asset('images/logo.png')}}" alt="" class="logo"
             /></a>
             <ul class="flex space-x-6 mr-6 text-lg">
                 <li>
