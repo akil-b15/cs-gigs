@@ -32,4 +32,15 @@ class UserController extends Controller
 
         return redirect('/')->with('message', 'User created and logged successfully');
     }
+
+    // LOGOUT
+    public function logout(Request $request){
+        auth()->logout();
+
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+
+        return redirect('/')->with('message', 'You have been Logged Out');
+
+    }
 }
