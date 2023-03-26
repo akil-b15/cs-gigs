@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\User;
 use App\Models\Listing;
+use Illuminate\Support\Str;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -23,7 +24,8 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Listing::factory(6)->create([
-            'user_id' => $user->id
+            'user_id' => $user->id,
+            'title' => Str::random(10)
         ]);
     }
 }
