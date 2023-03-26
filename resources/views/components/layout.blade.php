@@ -43,13 +43,13 @@
                     </span>
                 </li>
                 <li>
-                    <a href="/listings/manage" class="hover:text-laravel"
+                    <a href="/listings/manage" class="hover:text-blue-800"
                         ><i class="fa-solid fa-gear"></i>
                         Manage Listings</a
                     >
                 </li>
                 <li>
-                    <form class="inline" method="POST" action="/logout">
+                    <form class="inline hover:text-blue-800" method="POST" action="/logout">
                         @csrf
                         <button type="submit">
                             <i class="fa-solid fa-door-closed"></i> Logout
@@ -58,12 +58,12 @@
                 </li>
                 @else
                 <li>
-                    <a href="/register" class="hover:text-laravel"
+                    <a href="/register" class="hover:text-blue-800"
                         ><i class="fa-solid fa-user-plus"></i> Register</a
                     >
                 </li>
                 <li>
-                    <a href="/login" class="hover:text-laravel"
+                    <a href="/login" class="hover:text-blue-800"
                         ><i class="fa-solid fa-arrow-right-to-bracket"></i>
                         Login</a
                     >
@@ -83,8 +83,8 @@
         <footer class="bg-white rounded-lg shadow dark:bg-gray-900 m-4">
             <div class="w-full container mx-auto p-4 md:px-6 md:py-8">
                 <div class="sm:flex sm:items-center sm:justify-between">
-                    <a href="#" class="flex items-center mb-4 sm:mb-0">
-                        <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 mr-3" alt="Flowbite Logo" />
+                    <a href="/" class="flex items-center mb-4 sm:mb-0">
+                        <img class="h-8 mr-3" src="{{asset('images/logo-cs.png')}}" alt="" class="logo justify-center"/>
                         <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">CS-GIGS</span>
                     </a>
                     <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">

@@ -6,6 +6,7 @@
     ></div>
 
     <div class="z-10">
+        {{-- <div><a class="flex"><img class="h-8" src="{{asset('images/logo-cs.png')}}" alt=""/></a></div> --}}
         <h1 class="text-6xl font-bold uppercase text-sky-700">
             CS-<span class="text-black">Gigs</span>
         </h1>

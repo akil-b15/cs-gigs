@@ -23,7 +23,7 @@ class DatabaseSeeder extends Seeder
             'email' => 'john@gmail.com'
         ]);
 
-        Listing::factory(6)->create([
+        Listing::factory(50)->create([
             'user_id' => $user->id,
             'title' => Str::random(10)
         ]);
