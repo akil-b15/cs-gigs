@@ -13,11 +13,13 @@
             Find or post CS jobs & projects
         </p>
         <div>
-            <a
-                href="/register"
-                class="inline-block border-2 border-sky-700 text-sky-700 py-2 px-4 rounded-xl uppercase mt-2 hover:text-black hover:border-black"
-                >Sign Up to List a Gig</a
-            >
+            @auth
+                <a href="{{route('create')}}" class="inline-block border-2 border-sky-700 text-sky-700 py-2 px-4 rounded-xl  uppercase mt-2 hover:text-black hover:border-black" >Post a Gig</a>
+            @endauth
+                
+            @guest
+                <a href="/register" class="inline-block border-2 border-sky-700 text-sky-700 py-2 px-4 rounded-xl  uppercase mt-2 hover:text-black hover:border-black" >Sign Up to List a Gig</a>
+            @endguest
         </div>
     </div>
 </section>
